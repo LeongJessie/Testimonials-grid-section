@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-purple-50: hsl(260, 100%, 95%);
+  --primary-purple-300: hsl(264, 82%, 80%);
+  --primary-purple-500: hsl(263, 55%, 52%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-grey-100: hsl(214, 17%, 92%);
+  --neutral-grey-200: hsl(0, 0%, 81%);
+  --neutral-grey-400: hsl(224, 10%, 45%);
+  --neutral-grey-500: hsl(217, 19%, 35%);
+  --neutral-dark-blue: hsl(219, 29%, 14%);
+  --neutral-black: hsl(0, 0%, 7%);
+
+  --text-size: 13px;
+  --font-family: "Barlow Semi Condensed";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+body,
+main {
+  background-color: var(--neutral-white);
+}
+.cards-container {
+  margin: 15% 10%;
+}
+.card-one {
+  background-color: var(--primary-purple-500);
+  color: var(--neutral-white);
+  padding: clamp(1rem, 1vw + 1.5rem, 2rem);
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 3rem var(--neutral-grey-200);
+}
+.card-one .profil,
+.card-two .profil,
+.card-three .profil,
+.card-four .profil,
+.card-five .profil {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-block-end: 3%; /* margin-bottom devient margin-block-end */
+}
+.profil .profil-img img {
+  border-radius: 50%;
+  border: 0.1rem solid var(--primary-purple-300);
+  width: 80%;
+  height: auto;
+}
+.profil .profil-text h1 {
+  font-size: clamp(0.7rem, 1vw + 0.7rem, 1.5rem);
+  font-weight: 500;
+}
+.profil .profil-text h2 {
+  font-size: clamp(0.5rem, 1vw + 0.5rem, 1rem);
+  font-weight: 400;
+}
+.texts .text-one {
+  font-size: clamp(1rem, 1vw + 1rem, 1.4rem);
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-block-end: 1rem;
+}
+.texts .text-two {
+  font-size: clamp(0.6rem, 1vw + 0.6rem, 1rem);
+  line-height: 1.2rem;
+}
+
+.card-two {
+  background-color: var(--neutral-grey-500);
+  color: var(--neutral-white);
+  padding: clamp(1rem, 1vw + 1.5rem, 2rem);
+  border-radius: 1rem;
+  margin-block-start: 1.2rem;
+  box-shadow: 1rem 1rem 3rem var(--neutral-grey-200);
+}
+.card-two .profil .profil-img img {
+  border-radius: 50%;
+  border: 0.1rem solid var(--neutral-white);
+  width: 80%;
+  height: auto;
+}
+
+.card-three {
+  background-color: var(--neutral-white);
+  color: var(--neutral-grey-500);
+  padding: clamp(1rem, 1vw + 1.5rem, 2rem);
+  border-radius: 1rem;
+  margin-block-start: 1.2rem;
+  box-shadow: 1rem 1rem 3rem var(--neutral-grey-200);
+}
+.card-three .profil .profil-img img {
+  border-radius: 50%;
+  border: 0.1rem solid var(--neutral-white);
+  width: 80%;
+  height: auto;
+}
+.card-four {
+  background-color: var(--neutral-dark-blue);
+  color: var(--neutral-grey-200);
+  padding: clamp(1rem, 1vw + 1.5rem, 2rem);
+  border-radius: 1rem;
+  margin-block-start: 1.2rem;
+  box-shadow: 1rem 1rem 3rem var(--neutral-grey-200);
+}
+.card-five {
+  background-color: var(--neutral-white);
+  color: var(--neutral-grey-500);
+  padding: clamp(1rem, 1vw + 1.5rem, 2rem);
+  border-radius: 1rem;
+  margin-block-start: 1.2rem;
+  box-shadow: 1rem 1rem 3rem var(--neutral-grey-200);
+}
+
+@media (min-width: 90rem) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 0rem);
+  }
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0;
+    gap: 2rem;
+    width: 80%;
+  }
+  /* La partie gauche contient 4 cartes (2 en haut, 2 en bas) */
+  .cards-left {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cards-right {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .cards-top,
+  .cards-bottom {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  /* Ajustement des proportions */
+  .card-one {
+    flex: 2;
+    margin: 0;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 6rem;
+    background-size: 8rem;
+  }
+
+  .card-two {
+    flex: 1;
+    margin: 0;
+  }
+
+  .card-four {
+    flex: 2;
+    margin: 0;
+  }
+
+  .card-five {
+    flex: 2;
+    margin: 0;
+  }
+
+  .card-three {
+    flex: 1;
+    margin: 0;
+    height: 100%;
+  }
+}
