@@ -80,13 +80,16 @@ main {
   margin-block-start: 1.2rem;
   box-shadow: 1rem 1rem 3rem var(--neutral-grey-200);
 }
-.card-two .profil .profil-img img {
+
+.profil-img img {
   border-radius: 50%;
-  border: 0.1rem solid var(--neutral-white);
   width: 80%;
   height: auto;
 }
 
+.card-two .profil-img img {
+  border-color: var(--neutral-white);
+}
 .card-three {
   background-color: var(--neutral-white);
   color: var(--neutral-grey-500);
@@ -95,11 +98,9 @@ main {
   margin-block-start: 1.2rem;
   box-shadow: 1rem 1rem 3rem var(--neutral-grey-200);
 }
-.card-three .profil .profil-img img {
-  border-radius: 50%;
-  border: 0.1rem solid var(--neutral-white);
-  width: 80%;
-  height: auto;
+
+.card-three .profil-img img {
+  border-color: var(--neutral-white);
 }
 .card-four {
   background-color: var(--neutral-dark-blue);
